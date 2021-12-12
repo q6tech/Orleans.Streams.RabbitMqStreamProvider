@@ -1,0 +1,28 @@
+name: "Build"
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Start service containers
+        run: docker-compose -f .docker/test-services.yml up -d
+      - name: Ensure .NET is installed
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Build and pack
+        run: |
+          dotnet build -c Release
+          dotnet pack -c Release -o ./publish
+          dotnet test -c Release
+
+      - name: Stop service containers
+        if: always()
+        run: docker-compose -f .docker/test-services.yml down
