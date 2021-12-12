@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 using Toxiproxy.Net;
 using Toxiproxy.Net.Toxics;
 
@@ -16,41 +15,11 @@ namespace Orleans.Streams.RabbitMqStreamProvider.Tests
         public static readonly int RmqProxyPort = int.TryParse(Environment.GetEnvironmentVariable(ProxyPortEnvVar), out var port) ? port : 5670;
         public static int ClientPort => CanRunProxy ? RmqProxyPort : RmqPort;
 
-        public static bool UseDockerProxy => !string.IsNullOrEmpty(Environment.GetEnvironmentVariable(ProxyPortEnvVar));
-
-        public static bool CanRunProxy => CanStartProxy;
-
-        public static bool CanStartProxy => RuntimeInformation.IsOSPlatform(OSPlatform.Windows) && RuntimeInformation.OSArchitecture == Architecture.X64;
+        public static bool CanRunProxy => true;
 
         public static Process StartProxy()
         {
-            if (UseDockerProxy || !CanStartProxy) return null;
-
-            StopProxyIfRunning();
-
-            var proxyProcess = new Process
-            {
-                StartInfo = new ProcessStartInfo("bin-toxiproxy/toxiproxy-server-2.1.2-windows-amd64.exe")
-            };
-            proxyProcess.Start();
-
-            new Connection().Client().AddAsync(new Proxy
-            {
-                Name = RmqProxyName,
-                Enabled = true,
-                Listen = $"localhost:{ClientPort}",
-                Upstream = $"localhost:{RmqPort}"
-            }).GetAwaiter().GetResult();
-
-            return proxyProcess;
-        }
-
-        public static void StopProxyIfRunning()
-        {
-            foreach (var process in Process.GetProcessesByName("toxiproxy-server-2.1.2-windows-amd64"))
-            {
-                process.Terminate();
-            }
+            return null;
         }
 
         public static void AddLimitDataToRmqProxy(Connection connection, ToxicDirection direction, double toxicity, int timeout)

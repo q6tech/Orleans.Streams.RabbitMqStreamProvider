@@ -27,14 +27,4 @@
     <ProjectReference Include="..\Orleans.Streams.RabbitMqStreamProvider\Orleans.Streams.RabbitMqStreamProvider.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="bin-toxiproxy\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="bin-toxiproxy\toxiproxy-server-2.1.2-windows-amd64.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
