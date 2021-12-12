@@ -1,9 +1,10 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Orleans.Configuration;
+using Orleans.Streaming.RabbitMq.Configuration;
+using Orleans.Streams;
 
-namespace Orleans.Streams.RabbitMq
+namespace Orleans.Streaming.RabbitMq.RabbitMq
 {
     internal class RabbitMqOnlineConnectorFactory : IRabbitMqConnectorFactory
     {

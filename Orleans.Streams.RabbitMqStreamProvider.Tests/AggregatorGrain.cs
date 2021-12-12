@@ -2,12 +2,11 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-using Orleans;
+using Microsoft.Extensions.Logging;
 using Orleans.Concurrency;
 
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     public interface IAggregatorGrain : IGrainWithGuidKey
     {

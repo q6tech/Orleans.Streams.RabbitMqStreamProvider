@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Orleans.TestingHost;
-using static RabbitMqStreamTests.ToxiProxyHelpers;
+using static Orleans.Streams.RabbitMqStreamProvider.Tests.ToxiProxyHelpers;
 
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     [TestFixture]
     public class RmqIntegrationTests

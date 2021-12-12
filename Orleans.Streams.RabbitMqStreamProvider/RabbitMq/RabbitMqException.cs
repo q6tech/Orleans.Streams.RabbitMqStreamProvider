@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Orleans.Streams.RabbitMq
+namespace Orleans.Streaming.RabbitMq.RabbitMq
 {
     [Serializable]
     public class RabbitMqException : Exception

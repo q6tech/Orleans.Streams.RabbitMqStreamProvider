@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using Orleans.Configuration;
-using Orleans.Streams.RabbitMq;
+using Orleans.Streaming.RabbitMq.Configuration;
+using Orleans.Streaming.RabbitMq.RabbitMq;
+using Orleans.Streams;
 
-namespace Orleans.Streams
+namespace Orleans.Streaming.RabbitMq
 {
     internal class RabbitMqAdapterReceiver : IQueueAdapterReceiver
     {

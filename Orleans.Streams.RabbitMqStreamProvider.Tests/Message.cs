@@ -1,7 +1,7 @@
-﻿using ProtoBuf;
-using System;
+﻿using System;
+using ProtoBuf;
 
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     [Serializable]
     [ProtoContract]

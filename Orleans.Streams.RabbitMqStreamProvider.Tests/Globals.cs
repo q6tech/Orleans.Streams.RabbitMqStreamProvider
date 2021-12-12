@@ -1,4 +1,4 @@
-﻿namespace RabbitMqStreamTests
+﻿namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     public static class Globals
     {

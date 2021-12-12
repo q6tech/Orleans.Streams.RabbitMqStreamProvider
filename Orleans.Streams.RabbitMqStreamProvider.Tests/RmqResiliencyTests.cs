@@ -1,13 +1,12 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Orleans.TestingHost;
 using Toxiproxy.Net.Toxics;
-using static RabbitMqStreamTests.ToxiProxyHelpers;
+using static Orleans.Streams.RabbitMqStreamProvider.Tests.ToxiProxyHelpers;
 
 // Note: receiving seems to be more sensitive to network errors than sending, thus reducing latency in some of the test cases
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     [TestFixture]
     public class RmqResiliencyTests

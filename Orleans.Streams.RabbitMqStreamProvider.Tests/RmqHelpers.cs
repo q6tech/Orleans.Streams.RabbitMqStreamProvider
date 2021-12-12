@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using RabbitMQ.Client;
 
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     public enum RmqSerializer
     {

@@ -1,10 +1,9 @@
 ﻿using System;
 using Orleans.Runtime;
 using Orleans.Streams;
-using Orleans.Streams.RabbitMq;
 using RabbitMQ.Client;
 
-namespace Orleans.Configuration
+namespace Orleans.Streaming.RabbitMq.Configuration
 {
     public class RabbitMqOptions
     {

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using Orleans.Streams;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace Orleans.Streams.RabbitMq
+namespace Orleans.Streaming.RabbitMq.RabbitMq
 {
     public interface IRabbitMqConnectorFactory
     {

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using Microsoft.Extensions.DependencyInjection;
 using Orleans.Runtime;
-using Orleans.Streams.RabbitMq;
+using Orleans.Streaming.RabbitMq.RabbitMq;
 
-namespace Orleans.Streams
+namespace Orleans.Streaming.RabbitMq
 {
     public interface ITopologyProviderFactory
     {

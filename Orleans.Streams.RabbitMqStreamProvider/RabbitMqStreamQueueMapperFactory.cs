@@ -2,8 +2,10 @@
 using System.Collections.Concurrent;
 using Orleans.Configuration;
 using Orleans.Runtime;
+using Orleans.Streaming.RabbitMq.Configuration;
+using Orleans.Streams;
 
-namespace Orleans.Streams
+namespace Orleans.Streaming.RabbitMq
 {
     public interface IRabbitMqStreamQueueMapperFactory
     {

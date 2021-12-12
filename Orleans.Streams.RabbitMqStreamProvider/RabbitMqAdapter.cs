@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
-using Orleans.Configuration;
-using Orleans.Streams.RabbitMq;
+using Orleans.Streaming.RabbitMq.Configuration;
+using Orleans.Streaming.RabbitMq.RabbitMq;
+using Orleans.Streams;
 
-namespace Orleans.Streams
+namespace Orleans.Streaming.RabbitMq
 {
     /// <summary>
     /// For RMQ client, it is necessary the Model (channel) is not accessed by multiple threads at once, because with each such access,

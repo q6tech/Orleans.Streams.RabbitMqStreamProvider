@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.Extensions.Logging;
-using Orleans.Configuration;
+using Orleans.Streaming.RabbitMq.Configuration;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace Orleans.Streams.RabbitMq
+namespace Orleans.Streaming.RabbitMq.RabbitMq
 {
     // Effectively a singleton per provider. Needs to be thread safe!
     internal class RabbitMqConnectionProvider

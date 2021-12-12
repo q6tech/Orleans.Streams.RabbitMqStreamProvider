@@ -5,10 +5,12 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using Orleans.ApplicationParts;
 using Orleans.Configuration;
+using Orleans.Hosting;
+using Orleans.Streaming.RabbitMq.Configuration;
+using Orleans.Streaming.RabbitMq.RabbitMq;
 using Orleans.Streams;
-using Orleans.Streams.RabbitMq;
 
-namespace Orleans.Hosting
+namespace Orleans.Streaming.RabbitMq
 {
     public interface IRabbitMqStreamConfigurator : INamedServiceConfigurator { }
 

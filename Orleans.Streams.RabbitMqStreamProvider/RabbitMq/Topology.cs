@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Orleans.Configuration;
+using Orleans.Streaming.RabbitMq.Configuration;
+using Orleans.Streams;
 
-namespace Orleans.Streams.RabbitMq
+namespace Orleans.Streaming.RabbitMq.RabbitMq
 {
     public class RabbitMqQueueProperties
     {

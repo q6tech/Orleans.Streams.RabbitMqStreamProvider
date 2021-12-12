@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Orleans.Streams.RabbitMq
+namespace Orleans.Streaming.RabbitMq.RabbitMq
 {
     public class RabbitMqMessage
     {

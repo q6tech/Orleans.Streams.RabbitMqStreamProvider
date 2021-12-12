@@ -4,10 +4,11 @@ using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using Orleans.Providers.Streams.Common;
 using Orleans.Serialization;
-using Orleans.Streams.BatchContainer;
-using Orleans.Streams.RabbitMq;
+using Orleans.Streaming.RabbitMq.BatchContainer;
+using Orleans.Streaming.RabbitMq.RabbitMq;
+using Orleans.Streams;
 
-namespace Orleans.Streams
+namespace Orleans.Streaming.RabbitMq
 {
 
     public abstract class RabbitMqDataAdapterBase: IQueueDataAdapter<RabbitMqMessage, IEnumerable<IBatchContainer>>

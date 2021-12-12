@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace Orleans.Streams.RabbitMq
+namespace Orleans.Streaming.RabbitMq.RabbitMq
 {
     // Caution: the OnBasic* callbacks, and timeouts do not run in the connection's task scheduler.
     internal class RabbitMqProducer : IRabbitMqProducer

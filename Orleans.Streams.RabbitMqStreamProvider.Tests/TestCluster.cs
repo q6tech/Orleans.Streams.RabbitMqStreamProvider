@@ -2,15 +2,14 @@
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Orleans;
 using Orleans.Configuration;
 using Orleans.Hosting;
 using Orleans.Providers.Streams.Common;
 using Orleans.Runtime;
-using Orleans.Streams;
+using Orleans.Streaming.RabbitMq;
 using Orleans.TestingHost;
 
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     public static class TestClusterExtensions
     {

@@ -7,10 +7,11 @@ using Microsoft.Extensions.Options;
 using Orleans.Configuration;
 using Orleans.Providers.Streams.Common;
 using Orleans.Runtime;
-using Orleans.Serialization;
-using Orleans.Streams.RabbitMq;
+using Orleans.Streaming.RabbitMq.Configuration;
+using Orleans.Streaming.RabbitMq.RabbitMq;
+using Orleans.Streams;
 
-namespace Orleans.Streams
+namespace Orleans.Streaming.RabbitMq
 {
     public class RabbitMqAdapterFactory : IQueueAdapterFactory
     {

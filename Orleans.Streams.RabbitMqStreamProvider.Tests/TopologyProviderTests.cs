@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using NUnit.Framework;
-using Orleans;
 using Orleans.Configuration;
 using Orleans.Hosting;
 using Orleans.Serialization;
-using Orleans.Streams;
-using Orleans.Streams.RabbitMq;
-
+using Orleans.Streaming.RabbitMq;
+using Orleans.Streaming.RabbitMq.Configuration;
+using Orleans.Streaming.RabbitMq.RabbitMq;
 using Orleans.TestingHost;
 
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     [TestFixture]
     class TopologyProviderTests

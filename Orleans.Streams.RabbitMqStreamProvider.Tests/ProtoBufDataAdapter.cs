@@ -1,14 +1,14 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Orleans.Streams;
-using Orleans.Streams.BatchContainer;
-using Orleans.Streams.RabbitMq;
-using ProtoBuf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Microsoft.Extensions.DependencyInjection;
+using Orleans.Streaming.RabbitMq;
+using Orleans.Streaming.RabbitMq.BatchContainer;
+using Orleans.Streaming.RabbitMq.RabbitMq;
+using ProtoBuf;
 
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     public class ProtoBufDataAdapter : RabbitMqDataAdapterBase
     {

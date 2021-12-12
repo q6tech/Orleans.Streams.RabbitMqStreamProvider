@@ -7,7 +7,7 @@ using Orleans.Concurrency;
 using Orleans.TestingHost;
 using Toxiproxy.Net;
 
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     internal static class IntegrationTestHelpers
     {

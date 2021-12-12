@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Orleans.Providers.Streams.Common;
 using Orleans.Runtime;
+using Orleans.Streams;
 
-namespace Orleans.Streams.BatchContainer
+namespace Orleans.Streaming.RabbitMq.BatchContainer
 {
     [Serializable]
     public class RabbitMqBatchContainer : IBatchContainer

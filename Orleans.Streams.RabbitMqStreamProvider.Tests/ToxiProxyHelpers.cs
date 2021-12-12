@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using Toxiproxy.Net;
 using Toxiproxy.Net.Toxics;
 
-namespace RabbitMqStreamTests
+namespace Orleans.Streams.RabbitMqStreamProvider.Tests
 {
     internal static class ToxiProxyHelpers
     {

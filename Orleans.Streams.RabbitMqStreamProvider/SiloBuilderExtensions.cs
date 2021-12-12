@@ -1,8 +1,9 @@
 ﻿using System;
 using Microsoft.Extensions.Options;
-using Orleans.Configuration;
+using Orleans.Hosting;
+using Orleans.Streaming.RabbitMq.Configuration;
 
-namespace Orleans.Hosting
+namespace Orleans.Streaming.RabbitMq
 {
     public static class SiloBuilderExtensions
     {

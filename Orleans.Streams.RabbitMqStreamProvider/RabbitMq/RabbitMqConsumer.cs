@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace Orleans.Streams.RabbitMq
+namespace Orleans.Streaming.RabbitMq.RabbitMq
 {
     internal class RabbitMqConsumer : IRabbitMqConsumer
     {
@@ -109,7 +108,7 @@ namespace Orleans.Streams.RabbitMq
             return new RabbitMqMessage
             {
                 AppId = result.BasicProperties.AppId,
-                Body = result.Body,
+                Body = result.Body.ToArray(),
                 Channel = channel,
                 ClusterId = result.BasicProperties.ClusterId,
                 ContentEncoding = result.BasicProperties.ContentEncoding,
